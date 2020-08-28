@@ -6,11 +6,11 @@
 //  Copyright © 2020 Knowre. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol PostModel {
     var id: String { get }
-    var name: String { get }
+    var username: String { get }
     var userImage: UIImage? { get }
     var content: String { get }
 }

@@ -16,6 +16,9 @@
 		D13CC05E24F8DFA000280311 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CC05D24F8DFA000280311 /* UserModel.swift */; };
 		D13CC06024F8DFAB00280311 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CC05F24F8DFAB00280311 /* PostModel.swift */; };
 		D13CC06324F8DFCF00280311 /* CallbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */; };
+		D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1824F8E938008FC9FF /* UserRepository.swift */; };
+		D1BDCD1B24F8ECA0008FC9FF /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */; };
+		D1BDCD1D24F8ECCD008FC9FF /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		D13CC05D24F8DFA000280311 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D13CC05F24F8DFAB00280311 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackViewModel.swift; sourceTree = "<group>"; };
+		D1BDCD1824F8E938008FC9FF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 			children = (
 				D13CC05C24F8DF9500280311 /* Model */,
 				D13CC06124F8DFB700280311 /* Callback */,
+				D1BDCD1724F8E92E008FC9FF /* Repository */,
 				D10CD4FA24EF5CAE004416F4 /* AppDelegate.swift */,
 				D10CD50024EF5CAE004416F4 /* Main.storyboard */,
 				D10CD50324EF5CB1004416F4 /* Assets.xcassets */,
@@ -121,6 +128,16 @@
 				D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */,
 			);
 			path = Callback;
+			sourceTree = "<group>";
+		};
+		D1BDCD1724F8E92E008FC9FF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D1BDCD1824F8E938008FC9FF /* UserRepository.swift */,
+				D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */,
+				D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,9 +243,12 @@
 			files = (
 				D10CD4FF24EF5CAE004416F4 /* CallbackViewController.swift in Sources */,
 				D13CC06024F8DFAB00280311 /* PostModel.swift in Sources */,
+				D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */,
 				D13CC06324F8DFCF00280311 /* CallbackViewModel.swift in Sources */,
 				D13CC05E24F8DFA000280311 /* UserModel.swift in Sources */,
+				D1BDCD1D24F8ECCD008FC9FF /* PostRepository.swift in Sources */,
 				D10CD4FB24EF5CAE004416F4 /* AppDelegate.swift in Sources */,
+				D1BDCD1B24F8ECA0008FC9FF /* ImageRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
