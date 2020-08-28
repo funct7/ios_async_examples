@@ -8,10 +8,8 @@
 
 import Foundation
 
-protocol UserModel {
+@objc protocol UserModel {
     var id: String { get }
     var username: String { get }
     var pictureURL: URL { get }
 }
-
-protocol NSObjectUserModel : NSObjectProtocol, UserModel { }

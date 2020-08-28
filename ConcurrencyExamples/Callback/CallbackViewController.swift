@@ -9,11 +9,24 @@
 import UIKit
 
 final class CallbackViewController: UIViewController {
-
-    override
-    func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+    
+    // MARK: Private
+    
+    private let viewModel = CallbackViewModel()
+    
+    @IBOutlet
+    private weak var signInButton: UIButton!
+    
+    @IBOutlet
+    private weak var userView: UIStackView!
+    
+    @IBOutlet
+    private weak var userImageView: UIImageView!
+    
+    @IBOutlet
+    private weak var usernameLabel: UILabel!
+    
+    @IBOutlet
+    private weak var listView: UICollectionView!
 
 }

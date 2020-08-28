@@ -8,15 +8,27 @@
 
 import UIKit
 
-protocol CallbackViewModel : NSObjectProtocol {
+final class CallbackViewModel : NSObject {
     
-    dynamic var user: NSObjectUserModel? { get }
-    dynamic var userImage: UIImage? { get }
-    dynamic var feed: [PostModel] { get }
+    @objc
+    private(set) dynamic var user: UserModel? = nil
     
-    dynamic var alertMessage: String? { get }
+    @objc
+    private(set) dynamic var userImage: UIImage? = nil
     
-    func tapButton()
-    func signIn()
+    @objc
+    private(set) dynamic var feed: [PostModel] = []
+    
+    @objc
+    private(set) dynamic var alertMessage: String? = nil
+    
+    func tapButton() {
+        alertMessage = "로그인 하시겠습니까?"
+        alertMessage = nil
+    }
+    
+    func signIn() {
+        
+    }
     
 }

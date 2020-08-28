@@ -8,11 +8,9 @@
 
 import UIKit
 
-protocol PostModel {
+@objc protocol PostModel {
     var id: String { get }
     var username: String { get }
     var userImage: UIImage? { get }
     var content: String { get }
 }
-
-protocol NSObjectPostModel : NSObjectProtocol, PostModel { }
