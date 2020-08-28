@@ -13,6 +13,9 @@
 		D10CD50424EF5CB1004416F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D10CD50324EF5CB1004416F4 /* Assets.xcassets */; };
 		D10CD50724EF5CB1004416F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10CD50524EF5CB1004416F4 /* LaunchScreen.storyboard */; };
 		D10CD51224EF5CB2004416F4 /* ConcurrencyExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD51124EF5CB2004416F4 /* ConcurrencyExamplesTests.swift */; };
+		D13CC05E24F8DFA000280311 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CC05D24F8DFA000280311 /* UserModel.swift */; };
+		D13CC06024F8DFAB00280311 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CC05F24F8DFAB00280311 /* PostModel.swift */; };
+		D13CC06324F8DFCF00280311 /* CallbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,9 @@
 		D10CD51124EF5CB2004416F4 /* ConcurrencyExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyExamplesTests.swift; sourceTree = "<group>"; };
 		D10CD51324EF5CB2004416F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D13CC05B24F8D27800280311 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D13CC05D24F8DFA000280311 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D13CC05F24F8DFAB00280311 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +85,9 @@
 		D10CD4F924EF5CAE004416F4 /* ConcurrencyExamples */ = {
 			isa = PBXGroup;
 			children = (
+				D13CC05C24F8DF9500280311 /* Model */,
+				D13CC06124F8DFB700280311 /* Callback */,
 				D10CD4FA24EF5CAE004416F4 /* AppDelegate.swift */,
-				D10CD4FE24EF5CAE004416F4 /* CallbackViewController.swift */,
 				D10CD50024EF5CAE004416F4 /* Main.storyboard */,
 				D10CD50324EF5CB1004416F4 /* Assets.xcassets */,
 				D10CD50524EF5CB1004416F4 /* LaunchScreen.storyboard */,
@@ -96,6 +103,24 @@
 				D10CD51324EF5CB2004416F4 /* Info.plist */,
 			);
 			path = ConcurrencyExamplesTests;
+			sourceTree = "<group>";
+		};
+		D13CC05C24F8DF9500280311 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D13CC05D24F8DFA000280311 /* UserModel.swift */,
+				D13CC05F24F8DFAB00280311 /* PostModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D13CC06124F8DFB700280311 /* Callback */ = {
+			isa = PBXGroup;
+			children = (
+				D10CD4FE24EF5CAE004416F4 /* CallbackViewController.swift */,
+				D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */,
+			);
+			path = Callback;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D10CD4FF24EF5CAE004416F4 /* CallbackViewController.swift in Sources */,
+				D13CC06024F8DFAB00280311 /* PostModel.swift in Sources */,
+				D13CC06324F8DFCF00280311 /* CallbackViewModel.swift in Sources */,
+				D13CC05E24F8DFA000280311 /* UserModel.swift in Sources */,
 				D10CD4FB24EF5CAE004416F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
