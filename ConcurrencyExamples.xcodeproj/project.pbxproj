@@ -19,6 +19,8 @@
 		D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1824F8E938008FC9FF /* UserRepository.swift */; };
 		D1BDCD1B24F8ECA0008FC9FF /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */; };
 		D1BDCD1D24F8ECCD008FC9FF /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */; };
+		D1BDCD2024F8FED0008FC9FF /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1F24F8FED0008FC9FF /* ObservableObject.swift */; };
+		D1BDCD2224F8FEEC008FC9FF /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD2124F8FEEC008FC9FF /* Transform.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D1BDCD1824F8E938008FC9FF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		D1BDCD1F24F8FED0008FC9FF /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
+		D1BDCD2124F8FEEC008FC9FF /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 		D10CD4F924EF5CAE004416F4 /* ConcurrencyExamples */ = {
 			isa = PBXGroup;
 			children = (
+				D1BDCD1E24F8FEBC008FC9FF /* Type */,
 				D13CC05C24F8DF9500280311 /* Model */,
 				D13CC06124F8DFB700280311 /* Callback */,
 				D1BDCD1724F8E92E008FC9FF /* Repository */,
@@ -138,6 +143,15 @@
 				D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		D1BDCD1E24F8FEBC008FC9FF /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				D1BDCD1F24F8FED0008FC9FF /* ObservableObject.swift */,
+				D1BDCD2124F8FEEC008FC9FF /* Transform.swift */,
+			);
+			path = Type;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,12 +257,14 @@
 			files = (
 				D10CD4FF24EF5CAE004416F4 /* CallbackViewController.swift in Sources */,
 				D13CC06024F8DFAB00280311 /* PostModel.swift in Sources */,
+				D1BDCD2224F8FEEC008FC9FF /* Transform.swift in Sources */,
 				D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */,
 				D13CC06324F8DFCF00280311 /* CallbackViewModel.swift in Sources */,
 				D13CC05E24F8DFA000280311 /* UserModel.swift in Sources */,
 				D1BDCD1D24F8ECCD008FC9FF /* PostRepository.swift in Sources */,
 				D10CD4FB24EF5CAE004416F4 /* AppDelegate.swift in Sources */,
 				D1BDCD1B24F8ECA0008FC9FF /* ImageRepository.swift in Sources */,
+				D1BDCD2024F8FED0008FC9FF /* ObservableObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
