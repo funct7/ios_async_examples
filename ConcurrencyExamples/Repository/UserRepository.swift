@@ -24,14 +24,10 @@ final class UserRepository : BaseRepository {
         switch returnTable[#function] {
             
         case let user as UserModel:
-            dispatchQueue.asyncAfter(deadline: .now() + delay) {
-                completion(user, nil)
-            }
+            performAfterDelay { completion(user, nil) }
             
         case let error as Error:
-            dispatchQueue.asyncAfter(deadline: .now() + delay) {
-                completion(nil, error)
-            }
+            performAfterDelay { completion(nil, error) }
             
         default:
             print("\(#function) completion is never called")
@@ -40,7 +36,20 @@ final class UserRepository : BaseRepository {
     }
     
     func fetchUser(id: String, completion: @escaping (UserModel?, Error?) -> Void) {
+        let userTable = returnTable[#function] as! [String : Any]
         
+        switch userTable[id] {
+        
+        case let user as UserModel:
+            performAfterDelay { completion(user, nil) }
+            
+        case let error as Error:
+            performAfterDelay { completion(nil, error) }
+            
+        default:
+            print("\(#function) completion is never called")
+            
+        }
     }
     
     // MARK: Private

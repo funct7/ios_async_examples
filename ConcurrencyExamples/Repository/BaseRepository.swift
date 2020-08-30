@@ -24,4 +24,8 @@ class BaseRepository {
     
     let dispatchQueue: DispatchQueue = .global()
     
+    func performAfterDelay(_ block: @escaping () -> Void) {
+        dispatchQueue.asyncAfter(deadline: .now() + delay, execute: block)
+    }
+    
 }

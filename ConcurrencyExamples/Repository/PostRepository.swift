@@ -12,8 +12,19 @@ final class PostRepository : BaseRepository {
     
     // MARK: Interface
     
-    func fetchPost(userID: String, completion: @escaping ([Any]?, Error?) -> Void) {
+    func fetchPost(userID: String, completion: @escaping ([PostModel]?, Error?) -> Void) {
+        switch returnTable[#function] {
         
+        case let postList as [PostModel]:
+            performAfterDelay { completion(postList, nil) }
+        
+        case let error as Error:
+            performAfterDelay { completion(nil, error) }
+        
+        default:
+            print("\(#function) completion is never called")
+            
+        }
     }
     
     // MARK: Private
