@@ -10,6 +10,8 @@ import UIKit
 
 final class CallbackViewModel : NSObject {
     
+    // MARK: Interface
+    
     @objc
     private(set) dynamic var user: UserModel? = nil
     
@@ -28,7 +30,15 @@ final class CallbackViewModel : NSObject {
     }
     
     func signIn() {
-        
+        UserRepository.shared.signIn { [weak self] (user, error) in
+            do {
+                guard let user = user else { throw error! }
+                
+            } catch {
+                self?.alertMessage = error.localizedDescription
+                self?.alertMessage = nil
+            }
+        }
     }
     
 }

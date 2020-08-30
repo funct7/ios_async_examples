@@ -8,14 +8,35 @@
 
 import Foundation
 
-final class UserRepository {
+final class UserRepository : BaseRepository {
     
     // MARK: Interface
     
     private(set) var user: UserModel?
-    
-    func signIn(completion: @escaping (UserModel?, Error?) -> Void) {
-        
+  
+    /**
+     - Parameters:
+        - completion: 로그인 후 콜백. `user != nil || error != nil`.
+        - user:
+        - error:
+     */
+    func signIn(completion: @escaping (_ user: UserModel?, _ error: Error?) -> Void) {
+        switch returnTable[#function] {
+            
+        case let user as UserModel:
+            dispatchQueue.asyncAfter(deadline: .now() + delay) {
+                completion(user, nil)
+            }
+            
+        case let error as Error:
+            dispatchQueue.asyncAfter(deadline: .now() + delay) {
+                completion(nil, error)
+            }
+            
+        default:
+            print("\(#function) completion is never called")
+            
+        }
     }
     
     func fetchUser(id: String, completion: @escaping (UserModel?, Error?) -> Void) {
@@ -24,11 +45,7 @@ final class UserRepository {
     
     // MARK: Private
     
-    /**
-     `$userID : UserModel` 매핑.
-     */
-    private var userTable: [String : UserModel] = [:]
-    
+    override
     private init() { }
     
 }
