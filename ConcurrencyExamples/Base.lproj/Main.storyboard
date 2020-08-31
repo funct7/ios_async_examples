@@ -129,10 +129,15 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Mni-hX-HWo">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UOm-RA-vXM" secondAttribute="bottom" id="29N-SE-d4A"/>
+                            <constraint firstItem="Mni-hX-HWo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9jn-Cp-aFY"/>
+                            <constraint firstItem="Mni-hX-HWo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="KXz-eZ-xif"/>
                             <constraint firstItem="bRk-Dg-6gt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lns-sp-38p"/>
                             <constraint firstItem="UOm-RA-vXM" firstAttribute="top" secondItem="bRk-Dg-6gt" secondAttribute="bottom" id="RI1-HK-qFv"/>
                             <constraint firstItem="UOm-RA-vXM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UlR-1y-HB1"/>
@@ -143,6 +148,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="indicator" destination="Mni-hX-HWo" id="NLa-EN-elg"/>
                         <outlet property="listView" destination="UOm-RA-vXM" id="0DN-Gk-7do"/>
                         <outlet property="signInButton" destination="f1c-Hv-SmJ" id="Q9h-s6-irA"/>
                         <outlet property="userImageView" destination="fLM-UL-yWi" id="JB8-wD-oaJ"/>

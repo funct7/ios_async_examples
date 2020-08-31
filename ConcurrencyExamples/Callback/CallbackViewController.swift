@@ -66,6 +66,10 @@ final class CallbackViewController: BaseViewController {
             
             self?.present(ac, animated: true)
         }.setScope(&tokenList)
+        
+        viewModel
+            .bind(\.isLoading, indicator, \.isVisible)
+            .setScope(&tokenList)
     }
     
     // MARK: Private
@@ -92,6 +96,9 @@ final class CallbackViewController: BaseViewController {
     @IBOutlet
     private weak var listView: UICollectionView!
 
+    @IBOutlet
+    private weak var indicator: UIActivityIndicatorView!
+    
 }
 
 private extension CallbackViewController {

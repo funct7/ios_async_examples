@@ -35,12 +35,17 @@ final class CallbackViewModel : ObservableObject {
     @objc
     private(set) dynamic var alertMessage: String? = nil
     
+    @objc
+    private(set) dynamic var isLoading: Bool = false
+    
     func tapButton() {
         signInMessage = "로그인 하시겠습니까?"
         DispatchQueue.main.async { self.signInMessage = nil }
     }
     
     func signIn() {
+        isLoading = true
+        
         UserRepository.shared.signIn { [weak self] (user, error) in
             if let user = user {
                 self?.user = User(id: user.id)
@@ -74,6 +79,8 @@ final class CallbackViewModel : ObservableObject {
                                                 self?.feed
                                                     .filter { $0.userID == user.id }
                                                     .forEach { $0.userImage = image }
+                                                
+                                                self?.isLoading = false
                                             } else {
                                                 self?.setAlertMessage(error!.localizedDescription)
                                             }
