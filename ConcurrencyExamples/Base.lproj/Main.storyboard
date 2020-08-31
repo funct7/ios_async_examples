@@ -54,15 +54,23 @@
                                             <constraint firstAttribute="height" constant="64" id="VKP-fR-muS"/>
                                         </constraints>
                                     </stackView>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UlI-Dc-vvW">
+                                        <rect key="frame" x="345" y="48.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="TzF-Bh-0ts"/>
+                                        </connections>
+                                    </switch>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="ZmR-ds-9gq" firstAttribute="centerX" secondItem="bRk-Dg-6gt" secondAttribute="centerX" id="6LA-6z-WBa"/>
                                     <constraint firstItem="f1c-Hv-SmJ" firstAttribute="centerX" secondItem="bRk-Dg-6gt" secondAttribute="centerX" id="9Wk-l2-urW"/>
+                                    <constraint firstItem="UlI-Dc-vvW" firstAttribute="centerY" secondItem="bRk-Dg-6gt" secondAttribute="centerY" id="NsI-Ka-ZPX"/>
                                     <constraint firstItem="ZmR-ds-9gq" firstAttribute="centerY" secondItem="bRk-Dg-6gt" secondAttribute="centerY" id="eQx-Wd-SYZ"/>
                                     <constraint firstItem="f1c-Hv-SmJ" firstAttribute="centerY" secondItem="bRk-Dg-6gt" secondAttribute="centerY" id="fcc-WB-L8m"/>
                                     <constraint firstItem="ZmR-ds-9gq" firstAttribute="width" secondItem="bRk-Dg-6gt" secondAttribute="width" multiplier="0.8" id="fhS-aa-upc"/>
                                     <constraint firstAttribute="height" constant="128" id="m7M-KC-OcC"/>
+                                    <constraint firstAttribute="trailing" secondItem="UlI-Dc-vvW" secondAttribute="trailing" constant="20" id="qjx-le-tsP"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UOm-RA-vXM">

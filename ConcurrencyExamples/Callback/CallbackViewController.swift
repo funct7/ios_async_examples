@@ -94,3 +94,12 @@ final class CallbackViewController: BaseViewController {
 
 }
 
+private extension CallbackViewController {
+    
+    @IBAction
+    func toggleAction(_ sender: UISwitch) {
+        if sender.isOn { mockSuccess() }
+        else { mockFailure() }
+    }
+    
+}

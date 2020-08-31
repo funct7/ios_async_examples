@@ -61,7 +61,7 @@ final class CallbackViewModel : ObservableObject {
                         }
                         
                         postList
-                            .reduce(into: Set<String>()) { $0.insert($1.id) }
+                            .reduce(into: Set<String>()) { $0.insert($1.userID) }
                             .forEach {
                                 UserRepository.shared.fetchUser(id: $0) { [weak self] (user, error) in
                                     if let user = user {
