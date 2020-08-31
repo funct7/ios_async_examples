@@ -12,4 +12,8 @@ class BaseViewController : UIViewController {
     
     var tokenList: [NSKeyValueObservation] = []
     
+    deinit {
+        tokenList.forEach { $0.invalidate() }
+    }
+    
 }
