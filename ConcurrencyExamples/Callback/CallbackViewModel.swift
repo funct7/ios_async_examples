@@ -8,12 +8,23 @@
 
 import UIKit
 
-final class CallbackViewModel : NSObject {
+final class CallbackViewModel : ObservableObject {
     
     // MARK: Interface
     
     @objc
-    private(set) dynamic var user: User? = nil
+    private(set) dynamic var isSignInButtonVisible: Bool = true
+    
+    @objc
+    private(set) dynamic var isUserViewVisible: Bool = false
+    
+    @objc
+    private(set) dynamic var user: User? = nil {
+        didSet {
+            isSignInButtonVisible = user == nil
+            isUserViewVisible = user != nil
+        }
+    }
     
     @objc
     private(set) dynamic var feed: [Post] = []

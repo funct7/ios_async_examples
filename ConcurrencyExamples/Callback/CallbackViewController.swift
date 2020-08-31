@@ -8,7 +8,28 @@
 
 import UIKit
 
-final class CallbackViewController: UIViewController {
+final class CallbackViewController: BaseViewController {
+    
+    override
+    func viewDidLoad() {
+        super.viewDidLoad()
+        
+        viewModel
+            .bind(\.isSignInButtonVisible, signInButton, \.isVisible)
+            .setScope(&tokenList)
+        
+        viewModel
+            .bind(\.isUserViewVisible, userView, \.isVisible)
+            .setScope(&tokenList)
+        
+        viewModel
+            .bind(\.user, usernameLabel, { $0?.username }, \.text)
+            .setScope(&tokenList)
+        
+        viewModel
+            .bind(\.user, userImageView, { $0?.userImage }, \.image)
+            .setScope(&tokenList)
+    }
     
     // MARK: Private
     
@@ -30,3 +51,4 @@ final class CallbackViewController: UIViewController {
     private weak var listView: UICollectionView!
 
 }
+

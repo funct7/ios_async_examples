@@ -19,7 +19,7 @@ protocol ObservedObject { }
 extension ObservedObject where Self : ObservableObject {
     
     func bind<T>(_ keyPath: KeyPath<Self, T>, _ binder: @escaping (T) -> Void) -> NSKeyValueObservation {
-        observe(keyPath) { [weak queue] (observable, _) in
+        observe(keyPath, options: [.initial]) { [weak queue] (observable, _) in
             (queue ?? .main).async { binder(observable[keyPath: keyPath]) }
         }
     }
@@ -41,6 +41,8 @@ extension ObservedObject where Self : ObservableObject {
     }
     
     /**
+     - Note: In an MVVM architecture, transforms are advised to happen in the VM.
+     
      - Parameters:
         - keyPath: The source key path.
         - object: The object to bind to.
@@ -56,7 +58,7 @@ extension ObservedObject where Self : ObservableObject {
         -> NSKeyValueObservation
         where Object: AnyObject
     {
-        observe(keyPath) { [weak object, weak queue] (observable, _) in
+        observe(keyPath, options: [.initial]) { [weak object, weak queue] (observable, _) in
             guard let object = object else { return }
             let result = transform(observable[keyPath: keyPath])
             (queue ?? .main).async { object[keyPath: targetKeyPath] = result }
@@ -64,6 +66,8 @@ extension ObservedObject where Self : ObservableObject {
     }
     
     /**
+     - Note: In an MVVM architecture, transforms are advised to happen in the VM.
+     
      - Parameters:
         - keyPath: The source key path.
         - object: The object to bind to.
@@ -79,7 +83,7 @@ extension ObservedObject where Self : ObservableObject {
         -> NSKeyValueObservation
         where Object: AnyObject
     {
-        return observe(keyPath) { [weak object, weak queue] (observable, _) in
+        observe(keyPath, options: [.initial]) { [weak object, weak queue] (observable, _) in
             guard let object = object else { return }
             let result = object[keyPath: transformPath](observable[keyPath: keyPath])
             (queue ?? .main).async { object[keyPath: targetKeyPath] = result }

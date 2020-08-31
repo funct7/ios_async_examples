@@ -17,6 +17,9 @@
 		D13CC06024F8DFAB00280311 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CC05F24F8DFAB00280311 /* PostModel.swift */; };
 		D13CC06324F8DFCF00280311 /* CallbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */; };
 		D13D02D624FC6FDA00108EF4 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02D524FC6FDA00108EF4 /* BaseRepository.swift */; };
+		D13D02D924FC99D900108EF4 /* UIView+Visible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02D824FC99D900108EF4 /* UIView+Visible.swift */; };
+		D13D02DB24FC9C3900108EF4 /* NSKeyValueObservation+Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02DA24FC9C3900108EF4 /* NSKeyValueObservation+Scope.swift */; };
+		D13D02DD24FC9D8D00108EF4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02DC24FC9D8D00108EF4 /* BaseViewController.swift */; };
 		D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1824F8E938008FC9FF /* UserRepository.swift */; };
 		D1BDCD1B24F8ECA0008FC9FF /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */; };
 		D1BDCD1D24F8ECCD008FC9FF /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */; };
@@ -50,6 +53,9 @@
 		D13CC05F24F8DFAB00280311 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackViewModel.swift; sourceTree = "<group>"; };
 		D13D02D524FC6FDA00108EF4 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		D13D02D824FC99D900108EF4 /* UIView+Visible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Visible.swift"; sourceTree = "<group>"; };
+		D13D02DA24FC9C3900108EF4 /* NSKeyValueObservation+Scope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSKeyValueObservation+Scope.swift"; sourceTree = "<group>"; };
+		D13D02DC24FC9D8D00108EF4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D1BDCD1824F8E938008FC9FF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 		D10CD4F924EF5CAE004416F4 /* ConcurrencyExamples */ = {
 			isa = PBXGroup;
 			children = (
+				D13D02D724FC99CF00108EF4 /* Extension */,
 				D1BDCD1E24F8FEBC008FC9FF /* Type */,
 				D13CC05C24F8DF9500280311 /* Model */,
 				D13CC06124F8DFB700280311 /* Callback */,
@@ -137,6 +144,15 @@
 			path = Callback;
 			sourceTree = "<group>";
 		};
+		D13D02D724FC99CF00108EF4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D13D02D824FC99D900108EF4 /* UIView+Visible.swift */,
+				D13D02DA24FC9C3900108EF4 /* NSKeyValueObservation+Scope.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D1BDCD1724F8E92E008FC9FF /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +167,7 @@
 		D1BDCD1E24F8FEBC008FC9FF /* Type */ = {
 			isa = PBXGroup;
 			children = (
+				D13D02DC24FC9D8D00108EF4 /* BaseViewController.swift */,
 				D1BDCD1F24F8FED0008FC9FF /* ObservableObject.swift */,
 				D1BDCD2124F8FEEC008FC9FF /* Transform.swift */,
 			);
@@ -263,11 +280,14 @@
 				D1BDCD2224F8FEEC008FC9FF /* Transform.swift in Sources */,
 				D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */,
 				D13CC06324F8DFCF00280311 /* CallbackViewModel.swift in Sources */,
+				D13D02DD24FC9D8D00108EF4 /* BaseViewController.swift in Sources */,
 				D13CC05E24F8DFA000280311 /* UserModel.swift in Sources */,
 				D13D02D624FC6FDA00108EF4 /* BaseRepository.swift in Sources */,
 				D1BDCD1D24F8ECCD008FC9FF /* PostRepository.swift in Sources */,
 				D10CD4FB24EF5CAE004416F4 /* AppDelegate.swift in Sources */,
+				D13D02D924FC99D900108EF4 /* UIView+Visible.swift in Sources */,
 				D1BDCD1B24F8ECA0008FC9FF /* ImageRepository.swift in Sources */,
+				D13D02DB24FC9C3900108EF4 /* NSKeyValueObservation+Scope.swift in Sources */,
 				D1BDCD2024F8FED0008FC9FF /* ObservableObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
