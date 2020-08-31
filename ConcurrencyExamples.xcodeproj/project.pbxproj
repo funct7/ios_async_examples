@@ -20,6 +20,8 @@
 		D13D02D924FC99D900108EF4 /* UIView+Visible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02D824FC99D900108EF4 /* UIView+Visible.swift */; };
 		D13D02DB24FC9C3900108EF4 /* NSKeyValueObservation+Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02DA24FC9C3900108EF4 /* NSKeyValueObservation+Scope.swift */; };
 		D13D02DD24FC9D8D00108EF4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02DC24FC9D8D00108EF4 /* BaseViewController.swift */; };
+		D13D02DF24FCBA4C00108EF4 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02DE24FCBA4C00108EF4 /* TestError.swift */; };
+		D13D02E124FCBA5900108EF4 /* URL+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02E024FCBA5900108EF4 /* URL+Constant.swift */; };
 		D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1824F8E938008FC9FF /* UserRepository.swift */; };
 		D1BDCD1B24F8ECA0008FC9FF /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */; };
 		D1BDCD1D24F8ECCD008FC9FF /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */; };
@@ -56,6 +58,8 @@
 		D13D02D824FC99D900108EF4 /* UIView+Visible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Visible.swift"; sourceTree = "<group>"; };
 		D13D02DA24FC9C3900108EF4 /* NSKeyValueObservation+Scope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSKeyValueObservation+Scope.swift"; sourceTree = "<group>"; };
 		D13D02DC24FC9D8D00108EF4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D13D02DE24FCBA4C00108EF4 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
+		D13D02E024FCBA5900108EF4 /* URL+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Constant.swift"; sourceTree = "<group>"; };
 		D1BDCD1824F8E938008FC9FF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
@@ -147,8 +151,9 @@
 		D13D02D724FC99CF00108EF4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D13D02D824FC99D900108EF4 /* UIView+Visible.swift */,
 				D13D02DA24FC9C3900108EF4 /* NSKeyValueObservation+Scope.swift */,
+				D13D02D824FC99D900108EF4 /* UIView+Visible.swift */,
+				D13D02E024FCBA5900108EF4 /* URL+Constant.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			children = (
 				D13D02DC24FC9D8D00108EF4 /* BaseViewController.swift */,
 				D1BDCD1F24F8FED0008FC9FF /* ObservableObject.swift */,
+				D13D02DE24FCBA4C00108EF4 /* TestError.swift */,
 				D1BDCD2124F8FEEC008FC9FF /* Transform.swift */,
 			);
 			path = Type;
@@ -280,7 +286,9 @@
 				D1BDCD2224F8FEEC008FC9FF /* Transform.swift in Sources */,
 				D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */,
 				D13CC06324F8DFCF00280311 /* CallbackViewModel.swift in Sources */,
+				D13D02E124FCBA5900108EF4 /* URL+Constant.swift in Sources */,
 				D13D02DD24FC9D8D00108EF4 /* BaseViewController.swift in Sources */,
+				D13D02DF24FCBA4C00108EF4 /* TestError.swift in Sources */,
 				D13CC05E24F8DFA000280311 /* UserModel.swift in Sources */,
 				D13D02D624FC6FDA00108EF4 /* BaseRepository.swift in Sources */,
 				D1BDCD1D24F8ECCD008FC9FF /* PostRepository.swift in Sources */,
