@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc protocol UserModel {
+protocol UserModel {
     var id: String { get }
     var username: String { get }
     var pictureURL: URL { get }

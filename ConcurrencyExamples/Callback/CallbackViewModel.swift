@@ -13,13 +13,10 @@ final class CallbackViewModel : NSObject {
     // MARK: Interface
     
     @objc
-    private(set) dynamic var user: UserModel? = nil
+    private(set) dynamic var user: User? = nil
     
     @objc
-    private(set) dynamic var userImage: UIImage? = nil
-    
-    @objc
-    private(set) dynamic var feed: [PostModel] = []
+    private(set) dynamic var feed: [Post] = []
     
     @objc
     private(set) dynamic var alertMessage: String? = nil
@@ -31,13 +28,89 @@ final class CallbackViewModel : NSObject {
     
     func signIn() {
         UserRepository.shared.signIn { [weak self] (user, error) in
-            do {
-                guard let user = user else { throw error! }
+            if let user = user {
+                self?.user = User(id: user.id)
+                self?.user?.username = user.username
                 
-            } catch {
-                self?.alertMessage = error.localizedDescription
+                ImageRepository.shared.resolveImage(url: user.pictureURL) { [weak self] (image, error) in
+                    if let image = image {
+                        self?.user?.userImage = image
+                    } else {
+                        self?.alertMessage = error!.localizedDescription
+                        self?.alertMessage = nil
+                    }
+                }
+                
+                PostRepository.shared.fetchPost(userID: user.id) { [weak self] (postList, error) in
+                    if let postList = postList {
+                        self?.feed = postList.map {
+                            Post(id: $0.id, userID: $0.userID, content: $0.content)
+                        }
+                        
+                        postList
+                            .reduce(into: Set<String>()) { $0.insert($1.id) }
+                            .forEach {
+                                UserRepository.shared.fetchUser(id: $0) { [weak self] (user, error) in
+                                    if let user = user {
+                                        self?.feed
+                                            .filter { $0.userID == user.id }
+                                            .forEach { $0.username = user.username }
+                                        
+                                        ImageRepository.shared.resolveImage(url: user.pictureURL) { (image, error) in
+                                            if let image = image {
+                                                self?.feed
+                                                    .filter { $0.userID == user.id }
+                                                    .forEach { $0.userImage = image }
+                                            } else {
+                                                self?.alertMessage = error!.localizedDescription
+                                                self?.alertMessage = nil
+                                            }
+                                        }
+                                    } else {
+                                        self?.alertMessage = error!.localizedDescription
+                                        self?.alertMessage = nil
+                                    }
+                                }
+                            }
+                    } else {
+                        self?.alertMessage = error!.localizedDescription
+                        self?.alertMessage = nil
+                    }
+                }
+            } else {
+                self?.alertMessage = error!.localizedDescription
                 self?.alertMessage = nil
             }
+        }
+    }
+    
+}
+
+extension CallbackViewModel {
+    
+    final class User : NSObject {
+        let id: String
+        var username: String! = nil
+        var userImage: UIImage? = nil
+        
+        init(id: String) {
+            self.id = id
+            super.init()
+        }
+    }
+    
+    final class Post : NSObject {
+        let id: String
+        var userID: String
+        var username: String! = nil
+        var userImage: UIImage? = nil
+        var content: String
+        
+        init(id: String, userID: String, content: String) {
+            self.id = id
+            self.userID = userID
+            self.content = content
+            super.init()
         }
     }
     
