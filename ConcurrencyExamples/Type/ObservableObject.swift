@@ -19,48 +19,70 @@ protocol ObservedObject { }
 extension ObservedObject where Self : ObservableObject {
     
     func bind<T>(_ keyPath: KeyPath<Self, T>, _ binder: @escaping (T) -> Void) -> NSKeyValueObservation {
-        return observe(keyPath) { [weak queue] (observable, _) in
+        observe(keyPath) { [weak queue] (observable, _) in
             (queue ?? .main).async { binder(observable[keyPath: keyPath]) }
         }
     }
     
+    /**
+     - Parameters:
+        - keyPath: The source key path.
+        - object: The object to bind to.
+        - targetKeyPath: The target key path of the `object`.
+     */
     func bind<Object, T, U>(
         _ keyPath: KeyPath<Self, T>,
         _ object: Object,
-        _ targetPath: ReferenceWritableKeyPath<Object, U>)
+        _ targetKeyPath: ReferenceWritableKeyPath<Object, U>)
         -> NSKeyValueObservation
         where Object: AnyObject
     {
-        return bind(keyPath, object, Transform.identity(_:), targetPath)
+        bind(keyPath, object, Transform.identity(_:), targetKeyPath)
     }
     
+    /**
+     - Parameters:
+        - keyPath: The source key path.
+        - object: The object to bind to.
+        - transform: The function that transforms the source type to the target type.
+        - source: The source object to transform.
+        - targetKeyPath: The target key path of the `object`.
+     */
     func bind<Object, T, U>(
         _ keyPath: KeyPath<Self, T>,
         _ object: Object,
-        _ transform: @escaping (T) -> U = Transform.identity(_:),
-        _ targetPath: ReferenceWritableKeyPath<Object, U>)
+        _ transform: @escaping (_ source: T) -> U = Transform.identity(_:),
+        _ targetKeyPath: ReferenceWritableKeyPath<Object, U>)
         -> NSKeyValueObservation
         where Object: AnyObject
     {
-        return observe(keyPath) { [weak object, weak queue] (observable, _) in
+        observe(keyPath) { [weak object, weak queue] (observable, _) in
             guard let object = object else { return }
             let result = transform(observable[keyPath: keyPath])
-            (queue ?? .main).async { object[keyPath: targetPath] = result }
+            (queue ?? .main).async { object[keyPath: targetKeyPath] = result }
         }
     }
     
+    /**
+     - Parameters:
+        - keyPath: The source key path.
+        - object: The object to bind to.
+        - transformPath: The key path to the method that transforms the source type to the target type.
+        - source: The source object to transform.
+        - targetKeyPath: The target key path of the `object`.
+    */
     func bind<Object, T, U>(
         _ keyPath: KeyPath<Self, T>,
         _ object: Object,
-        _ transformPath: KeyPath<Object, (T) -> U>,
-        _ targetPath: ReferenceWritableKeyPath<Object, U>)
+        _ transformPath: KeyPath<Object, (_ source: T) -> U>,
+        _ targetKeyPath: ReferenceWritableKeyPath<Object, U>)
         -> NSKeyValueObservation
         where Object: AnyObject
     {
         return observe(keyPath) { [weak object, weak queue] (observable, _) in
             guard let object = object else { return }
             let result = object[keyPath: transformPath](observable[keyPath: keyPath])
-            (queue ?? .main).async { object[keyPath: targetPath] = result }
+            (queue ?? .main).async { object[keyPath: targetKeyPath] = result }
         }
     }
     
