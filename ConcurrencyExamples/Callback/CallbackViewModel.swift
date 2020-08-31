@@ -30,11 +30,14 @@ final class CallbackViewModel : ObservableObject {
     private(set) dynamic var feed: [Post] = []
     
     @objc
+    private(set) dynamic var signInMessage: String? = nil
+    
+    @objc
     private(set) dynamic var alertMessage: String? = nil
     
     func tapButton() {
-        alertMessage = "로그인 하시겠습니까?"
-        alertMessage = nil
+        signInMessage = "로그인 하시겠습니까?"
+        DispatchQueue.main.async { self.signInMessage = nil }
     }
     
     func signIn() {
@@ -47,8 +50,7 @@ final class CallbackViewModel : ObservableObject {
                     if let image = image {
                         self?.user?.userImage = image
                     } else {
-                        self?.alertMessage = error!.localizedDescription
-                        self?.alertMessage = nil
+                        self?.setAlertMessage(error!.localizedDescription)
                     }
                 }
                 
@@ -73,26 +75,29 @@ final class CallbackViewModel : ObservableObject {
                                                     .filter { $0.userID == user.id }
                                                     .forEach { $0.userImage = image }
                                             } else {
-                                                self?.alertMessage = error!.localizedDescription
-                                                self?.alertMessage = nil
+                                                self?.setAlertMessage(error!.localizedDescription)
                                             }
                                         }
                                     } else {
-                                        self?.alertMessage = error!.localizedDescription
-                                        self?.alertMessage = nil
+                                        self?.setAlertMessage(error!.localizedDescription)
                                     }
                                 }
                             }
                     } else {
-                        self?.alertMessage = error!.localizedDescription
-                        self?.alertMessage = nil
+                        self?.setAlertMessage(error!.localizedDescription)
                     }
                 }
             } else {
-                self?.alertMessage = error!.localizedDescription
-                self?.alertMessage = nil
+                self?.setAlertMessage(error!.localizedDescription)
             }
         }
+    }
+    
+    // MARK: Private
+    
+    private func setAlertMessage(_ message: String) {
+        alertMessage = message
+        DispatchQueue.main.async { self.alertMessage = nil }
     }
     
 }

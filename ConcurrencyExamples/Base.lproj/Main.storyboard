@@ -30,6 +30,9 @@
                                         <state key="normal" title="로그인 하기">
                                             <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kkG-ek-ztg"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZmR-ds-9gq">
                                         <rect key="frame" x="41.5" y="32" width="331" height="64"/>

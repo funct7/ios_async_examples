@@ -29,6 +29,43 @@ final class CallbackViewController: BaseViewController {
         viewModel
             .bind(\.user, userImageView, { $0?.userImage }, \.image)
             .setScope(&tokenList)
+        
+        viewModel.bind(\.signInMessage) { [weak self] in
+            guard let message = $0 else { return }
+            
+            let ac = UIAlertController(
+                title: nil,
+                message: message,
+                preferredStyle: .alert)
+            let action1 = UIAlertAction(
+                title: "확인",
+                style: .default)
+            { _ in
+                self?.viewModel.signIn()
+            }
+            let action2 = UIAlertAction(
+                title: "취소",
+                style: .cancel,
+                handler: nil)
+            
+            ac.addAction(action1)
+            ac.addAction(action2)
+            
+            self?.present(ac, animated: true)
+        }.setScope(&tokenList)
+        
+        viewModel.bind(\.alertMessage) { [weak self] in
+            guard let errorMessage = $0 else { return }
+            
+            let ac = UIAlertController(
+                title: nil,
+                message: errorMessage,
+                preferredStyle: .alert)
+            
+            ac.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+            
+            self?.present(ac, animated: true)
+        }.setScope(&tokenList)
     }
     
     // MARK: Private
@@ -37,6 +74,11 @@ final class CallbackViewController: BaseViewController {
     
     @IBOutlet
     private weak var signInButton: UIButton!
+    
+    @IBAction
+    private func signInAction(_ sender: UIButton) {
+        viewModel.tapButton()
+    }
     
     @IBOutlet
     private weak var userView: UIStackView!
