@@ -106,8 +106,8 @@ extension CallbackViewModel {
     
     final class User : NSObject {
         let id: String
-        var username: String! = nil
-        var userImage: UIImage? = nil
+        @objc dynamic var username: String! = nil
+        @objc dynamic var userImage: UIImage? = nil
         
         init(id: String) {
             self.id = id
@@ -117,10 +117,10 @@ extension CallbackViewModel {
     
     final class Post : NSObject {
         let id: String
-        var userID: String
-        var username: String! = nil
-        var userImage: UIImage? = nil
-        var content: String
+        @objc dynamic var userID: String
+        @objc dynamic var username: String! = nil
+        @objc dynamic var userImage: UIImage? = nil
+        @objc dynamic var content: String
         
         init(id: String, userID: String, content: String) {
             self.id = id

@@ -23,11 +23,11 @@ final class CallbackViewController: BaseViewController {
             .setScope(&tokenList)
         
         viewModel
-            .bind(\.user, usernameLabel, { $0?.username }, \.text)
+            .bind(\.user?.username, usernameLabel, \.text)
             .setScope(&tokenList)
         
         viewModel
-            .bind(\.user, userImageView, { $0?.userImage }, \.image)
+            .bind(\.user?.userImage, userImageView, \.image)
             .setScope(&tokenList)
         
         viewModel.bind(\.signInMessage) { [weak self] in
