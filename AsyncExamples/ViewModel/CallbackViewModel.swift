@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CallbackViewModel : BaseViewModel {
+final class CallbackViewModel : ViewModel {
     
     // MARK: Implement - BaseViewModel
     
