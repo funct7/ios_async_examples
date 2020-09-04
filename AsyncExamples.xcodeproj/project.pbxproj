@@ -12,7 +12,6 @@
 		D10CD50224EF5CAE004416F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10CD50024EF5CAE004416F4 /* Main.storyboard */; };
 		D10CD50424EF5CB1004416F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D10CD50324EF5CB1004416F4 /* Assets.xcassets */; };
 		D10CD50724EF5CB1004416F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10CD50524EF5CB1004416F4 /* LaunchScreen.storyboard */; };
-		D10CD51224EF5CB2004416F4 /* ConcurrencyExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD51124EF5CB2004416F4 /* ConcurrencyExamplesTests.swift */; };
 		D13CC05E24F8DFA000280311 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CC05D24F8DFA000280311 /* UserModel.swift */; };
 		D13CC06024F8DFAB00280311 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CC05F24F8DFAB00280311 /* PostModel.swift */; };
 		D13CC06324F8DFCF00280311 /* CallbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */; };
@@ -40,15 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D10CD4F724EF5CAE004416F4 /* ConcurrencyExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrencyExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D10CD4F724EF5CAE004416F4 /* Callback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Callback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10CD4FA24EF5CAE004416F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D10CD4FE24EF5CAE004416F4 /* CallbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackViewController.swift; sourceTree = "<group>"; };
 		D10CD50124EF5CAE004416F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D10CD50324EF5CB1004416F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D10CD50624EF5CB1004416F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D10CD50824EF5CB1004416F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D10CD50D24EF5CB2004416F4 /* ConcurrencyExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcurrencyExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D10CD51124EF5CB2004416F4 /* ConcurrencyExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyExamplesTests.swift; sourceTree = "<group>"; };
+		D10CD50D24EF5CB2004416F4 /* CallbackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallbackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10CD51324EF5CB2004416F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D13CC05B24F8D27800280311 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D13CC05D24F8DFA000280311 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -89,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				D13CC05B24F8D27800280311 /* README.md */,
-				D10CD4F924EF5CAE004416F4 /* ConcurrencyExamples */,
-				D10CD51024EF5CB2004416F4 /* ConcurrencyExamplesTests */,
+				D10CD4F924EF5CAE004416F4 /* Callback */,
+				D10CD51024EF5CB2004416F4 /* CallbackTests */,
 				D10CD4F824EF5CAE004416F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,36 +96,36 @@
 		D10CD4F824EF5CAE004416F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D10CD4F724EF5CAE004416F4 /* ConcurrencyExamples.app */,
-				D10CD50D24EF5CB2004416F4 /* ConcurrencyExamplesTests.xctest */,
+				D10CD4F724EF5CAE004416F4 /* Callback.app */,
+				D10CD50D24EF5CB2004416F4 /* CallbackTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D10CD4F924EF5CAE004416F4 /* ConcurrencyExamples */ = {
+		D10CD4F924EF5CAE004416F4 /* Callback */ = {
 			isa = PBXGroup;
 			children = (
 				D13D02D724FC99CF00108EF4 /* Extension */,
 				D1BDCD1E24F8FEBC008FC9FF /* Type */,
 				D13CC05C24F8DF9500280311 /* Model */,
-				D13CC06124F8DFB700280311 /* Callback */,
 				D1BDCD1724F8E92E008FC9FF /* Repository */,
 				D10CD4FA24EF5CAE004416F4 /* AppDelegate.swift */,
+				D10CD4FE24EF5CAE004416F4 /* CallbackViewController.swift */,
+				D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */,
 				D10CD50024EF5CAE004416F4 /* Main.storyboard */,
 				D10CD50324EF5CB1004416F4 /* Assets.xcassets */,
 				D10CD50524EF5CB1004416F4 /* LaunchScreen.storyboard */,
 				D10CD50824EF5CB1004416F4 /* Info.plist */,
 			);
-			path = ConcurrencyExamples;
+			path = Callback;
 			sourceTree = "<group>";
 		};
-		D10CD51024EF5CB2004416F4 /* ConcurrencyExamplesTests */ = {
+		D10CD51024EF5CB2004416F4 /* CallbackTests */ = {
 			isa = PBXGroup;
 			children = (
-				D10CD51124EF5CB2004416F4 /* ConcurrencyExamplesTests.swift */,
 				D10CD51324EF5CB2004416F4 /* Info.plist */,
 			);
-			path = ConcurrencyExamplesTests;
+			path = CallbackTests;
 			sourceTree = "<group>";
 		};
 		D13CC05C24F8DF9500280311 /* Model */ = {
@@ -137,15 +135,6 @@
 				D13CC05F24F8DFAB00280311 /* PostModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D13CC06124F8DFB700280311 /* Callback */ = {
-			isa = PBXGroup;
-			children = (
-				D10CD4FE24EF5CAE004416F4 /* CallbackViewController.swift */,
-				D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */,
-			);
-			path = Callback;
 			sourceTree = "<group>";
 		};
 		D13D02D724FC99CF00108EF4 /* Extension */ = {
@@ -183,9 +172,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D10CD4F624EF5CAE004416F4 /* ConcurrencyExamples */ = {
+		D10CD4F624EF5CAE004416F4 /* Callback */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D10CD51624EF5CB2004416F4 /* Build configuration list for PBXNativeTarget "ConcurrencyExamples" */;
+			buildConfigurationList = D10CD51624EF5CB2004416F4 /* Build configuration list for PBXNativeTarget "Callback" */;
 			buildPhases = (
 				D10CD4F324EF5CAE004416F4 /* Sources */,
 				D10CD4F424EF5CAE004416F4 /* Frameworks */,
@@ -195,14 +184,14 @@
 			);
 			dependencies = (
 			);
-			name = ConcurrencyExamples;
+			name = Callback;
 			productName = ConcurrencyExamples;
-			productReference = D10CD4F724EF5CAE004416F4 /* ConcurrencyExamples.app */;
+			productReference = D10CD4F724EF5CAE004416F4 /* Callback.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D10CD50C24EF5CB2004416F4 /* ConcurrencyExamplesTests */ = {
+		D10CD50C24EF5CB2004416F4 /* CallbackTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D10CD51924EF5CB2004416F4 /* Build configuration list for PBXNativeTarget "ConcurrencyExamplesTests" */;
+			buildConfigurationList = D10CD51924EF5CB2004416F4 /* Build configuration list for PBXNativeTarget "CallbackTests" */;
 			buildPhases = (
 				D10CD50924EF5CB2004416F4 /* Sources */,
 				D10CD50A24EF5CB2004416F4 /* Frameworks */,
@@ -213,9 +202,9 @@
 			dependencies = (
 				D10CD50F24EF5CB2004416F4 /* PBXTargetDependency */,
 			);
-			name = ConcurrencyExamplesTests;
+			name = CallbackTests;
 			productName = ConcurrencyExamplesTests;
-			productReference = D10CD50D24EF5CB2004416F4 /* ConcurrencyExamplesTests.xctest */;
+			productReference = D10CD50D24EF5CB2004416F4 /* CallbackTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +226,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D10CD4F224EF5CAE004416F4 /* Build configuration list for PBXProject "ConcurrencyExamples" */;
+			buildConfigurationList = D10CD4F224EF5CAE004416F4 /* Build configuration list for PBXProject "AsyncExamples" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -250,8 +239,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D10CD4F624EF5CAE004416F4 /* ConcurrencyExamples */,
-				D10CD50C24EF5CB2004416F4 /* ConcurrencyExamplesTests */,
+				D10CD4F624EF5CAE004416F4 /* Callback */,
+				D10CD50C24EF5CB2004416F4 /* CallbackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,7 +293,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D10CD51224EF5CB2004416F4 /* ConcurrencyExamplesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +301,7 @@
 /* Begin PBXTargetDependency section */
 		D10CD50F24EF5CB2004416F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D10CD4F624EF5CAE004416F4 /* ConcurrencyExamples */;
+			target = D10CD4F624EF5CAE004416F4 /* Callback */;
 			targetProxy = D10CD50E24EF5CB2004416F4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -458,14 +446,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
-				INFOPLIST_FILE = ConcurrencyExamples/Info.plist;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.ConcurrencyExamples;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knowre.$(TARGET_NAME)";
+				PRODUCT_NAME = Callback;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -477,14 +465,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
-				INFOPLIST_FILE = ConcurrencyExamples/Info.plist;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.ConcurrencyExamples;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knowre.$(TARGET_NAME)";
+				PRODUCT_NAME = Callback;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -497,18 +485,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
-				INFOPLIST_FILE = ConcurrencyExamplesTests/Info.plist;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.ConcurrencyExamplesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knowre.$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcurrencyExamples.app/ConcurrencyExamples";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AsyncExamples.app/AsyncExamples";
 			};
 			name = Debug;
 		};
@@ -519,25 +507,25 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HCBQJDHQ6;
-				INFOPLIST_FILE = ConcurrencyExamplesTests/Info.plist;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.knowre.ConcurrencyExamplesTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knowre.$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConcurrencyExamples.app/ConcurrencyExamples";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AsyncExamples.app/AsyncExamples";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D10CD4F224EF5CAE004416F4 /* Build configuration list for PBXProject "ConcurrencyExamples" */ = {
+		D10CD4F224EF5CAE004416F4 /* Build configuration list for PBXProject "AsyncExamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D10CD51424EF5CB2004416F4 /* Debug */,
@@ -546,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D10CD51624EF5CB2004416F4 /* Build configuration list for PBXNativeTarget "ConcurrencyExamples" */ = {
+		D10CD51624EF5CB2004416F4 /* Build configuration list for PBXNativeTarget "Callback" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D10CD51724EF5CB2004416F4 /* Debug */,
@@ -555,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D10CD51924EF5CB2004416F4 /* Build configuration list for PBXNativeTarget "ConcurrencyExamplesTests" */ = {
+		D10CD51924EF5CB2004416F4 /* Build configuration list for PBXNativeTarget "CallbackTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D10CD51A24EF5CB2004416F4 /* Debug */,
