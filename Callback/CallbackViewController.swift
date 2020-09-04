@@ -86,11 +86,6 @@ final class CallbackViewController: BaseViewController {
     @IBOutlet
     private weak var signInButton: UIButton!
     
-    @IBAction
-    private func signInAction(_ sender: UIButton) {
-        viewModel.tapButton()
-    }
-    
     @IBOutlet
     private weak var userView: UIStackView!
     
@@ -109,6 +104,11 @@ final class CallbackViewController: BaseViewController {
 }
 
 private extension CallbackViewController {
+    
+    @IBAction
+    private func signInAction(_ sender: UIButton) {
+        viewModel.tapButton()
+    }
     
     @IBAction
     func toggleAction(_ sender: UISwitch) {
