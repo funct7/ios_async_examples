@@ -81,6 +81,7 @@ final class CallbackViewModel : ObservableObject {
                             .reduce(into: Set<String>()) { $0.insert($1.userID) }
                             .forEach {
                                 self.incrementLoading()
+                                
                                 UserRepository.shared.fetchUser(id: $0) { [weak self] (user, error) in
                                     guard let self = self else { return }
                                     
@@ -90,6 +91,7 @@ final class CallbackViewModel : ObservableObject {
                                             .forEach { $0.username = user.username }
                                         
                                         self.incrementLoading()
+                                        
                                         ImageRepository.shared.resolveImage(url: user.pictureURL) { [weak self] (image, error) in
                                             guard let self = self else { return }
                                             
@@ -124,6 +126,11 @@ final class CallbackViewModel : ObservableObject {
             
             self.decrementLoading()
         }
+    }
+    
+    func signOut() {
+        user = nil
+        feed = []
     }
     
     // MARK: Private

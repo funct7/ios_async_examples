@@ -116,6 +116,11 @@ private extension CallbackViewController {
         else { mockFailure() }
     }
     
+    @IBAction
+    func signOutAction(_ sender: UIButton) {
+        viewModel.signOut()
+    }
+    
 }
 
 extension CallbackViewController : UICollectionViewDataSource {
