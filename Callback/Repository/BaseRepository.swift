@@ -15,7 +15,8 @@ class BaseRepository {
     
     // MARK: Interface
     
-    var delay: TimeInterval = 1.0
+    /// Max delay.
+    var delay: TimeInterval = 2.0
     
     /**
      `$METHOD_NAME : $RETURN_VALUE` 테이블.
@@ -25,7 +26,7 @@ class BaseRepository {
     let dispatchQueue: DispatchQueue = .global()
     
     func performAfterDelay(_ block: @escaping () -> Void) {
-        dispatchQueue.asyncAfter(deadline: .now() + delay, execute: block)
+        dispatchQueue.asyncAfter(deadline: .now() + .random(in: 0.0...delay), execute: block)
     }
     
 }
