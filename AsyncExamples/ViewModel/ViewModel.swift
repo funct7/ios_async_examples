@@ -55,11 +55,17 @@ class ViewModel : ObservableObject {
     
     @objc dynamic var isLoading: Bool = false
     
-    func tapButton() { fatalError("implement in subclass") }
+    func tapButton() {
+        signInMessage = "로그인 하시겠습니까?"
+        DispatchQueue.main.async { self.signInMessage = nil }
+    }
     
     func signIn() { fatalError("implement in subclass") }
     
-    func signOut() { fatalError("implement in subclass") }
+    func signOut() {
+        user = nil
+        feed = []
+    }
     
     // MARK: Interface
     

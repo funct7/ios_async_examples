@@ -10,13 +10,7 @@ import UIKit
 
 final class CallbackViewModel : ViewModel {
     
-    // MARK: Implement - BaseViewModel
-    
-    override
-    func tapButton() {
-        signInMessage = "로그인 하시겠습니까?"
-        DispatchQueue.main.async { self.signInMessage = nil }
-    }
+    // MARK: Implement - ViewModel
     
     override
     func signIn() {
@@ -100,12 +94,6 @@ final class CallbackViewModel : ViewModel {
             
             self.decrementLoading()
         }
-    }
-    
-    override
-    func signOut() {
-        user = nil
-        feed = []
     }
         
 }
