@@ -1,5 +1,5 @@
 //
-//  CallbackViewController.swift
+//  ViewController.swift
 //  ConcurrencyExamples
 //
 //  Created by Joshua Park on 2020/08/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CallbackViewController: BaseViewController {
+final class ViewController: BaseViewController {
     
     override
     func viewDidLoad() {
@@ -81,7 +81,7 @@ final class CallbackViewController: BaseViewController {
     
     // MARK: Private
     
-    private let viewModel = CallbackViewModel()
+    private let viewModel: BaseViewModel = CallbackViewModel()
     
     @IBOutlet
     private weak var signInButton: UIButton!
@@ -103,7 +103,7 @@ final class CallbackViewController: BaseViewController {
     
 }
 
-private extension CallbackViewController {
+private extension ViewController {
     
     @IBAction
     private func signInAction(_ sender: UIButton) {
@@ -123,7 +123,7 @@ private extension CallbackViewController {
     
 }
 
-extension CallbackViewController : UICollectionViewDataSource {
+extension ViewController : UICollectionViewDataSource {
     
     func collectionView(
         _ collectionView: UICollectionView,

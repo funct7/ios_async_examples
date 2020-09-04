@@ -8,41 +8,17 @@
 
 import UIKit
 
-final class CallbackViewModel : ObservableObject {
+final class CallbackViewModel : BaseViewModel {
     
-    // MARK: Interface
+    // MARK: Implement - BaseViewModel
     
-    @objc
-    private(set) dynamic var isSignInButtonVisible: Bool = true
-    
-    @objc
-    private(set) dynamic var isUserViewVisible: Bool = false
-    
-    @objc
-    private(set) dynamic var user: User? = nil {
-        didSet {
-            isSignInButtonVisible = user == nil
-            isUserViewVisible = user != nil
-        }
-    }
-    
-    @objc
-    private(set) dynamic var feed: [Post] = []
-    
-    @objc
-    private(set) dynamic var signInMessage: String? = nil
-    
-    @objc
-    private(set) dynamic var alertMessage: String? = nil
-    
-    @objc
-    private(set) dynamic var isLoading: Bool = false
-    
+    override
     func tapButton() {
         signInMessage = "로그인 하시겠습니까?"
         DispatchQueue.main.async { self.signInMessage = nil }
     }
     
+    override
     func signIn() {
         incrementLoading()
         
@@ -126,58 +102,10 @@ final class CallbackViewModel : ObservableObject {
         }
     }
     
+    override
     func signOut() {
         user = nil
         feed = []
     }
-    
-    // MARK: Private
-    
-    private func setAlertMessage(_ message: String) {
-        alertMessage = message
-        DispatchQueue.main.async { self.alertMessage = nil }
-    }
-    
-    private var loadingCount: Int = 0 {
-        didSet { isLoading = loadingCount > 0 }
-    }
-    
-    private func incrementLoading() {
-        loadingCount += 1
-    }
-    
-    private func decrementLoading() {
-        loadingCount -= 1
-    }
-    
-}
-
-extension CallbackViewModel {
-    
-    final class User : NSObject {
-        let id: String
-        @objc dynamic var username: String! = nil
-        @objc dynamic var userImage: UIImage? = nil
         
-        init(id: String) {
-            self.id = id
-            super.init()
-        }
-    }
-    
-    final class Post : ObservableObject {
-        let id: String
-        @objc dynamic var userID: String
-        @objc dynamic var username: String! = nil
-        @objc dynamic var userImage: UIImage? = nil
-        @objc dynamic var content: String
-        
-        init(id: String, userID: String, content: String) {
-            self.id = id
-            self.userID = userID
-            self.content = content
-            super.init()
-        }
-    }
-    
 }

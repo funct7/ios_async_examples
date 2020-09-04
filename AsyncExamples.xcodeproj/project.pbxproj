@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D10CD4FB24EF5CAE004416F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD4FA24EF5CAE004416F4 /* AppDelegate.swift */; };
-		D10CD4FF24EF5CAE004416F4 /* CallbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD4FE24EF5CAE004416F4 /* CallbackViewController.swift */; };
+		D10CD4FF24EF5CAE004416F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD4FE24EF5CAE004416F4 /* ViewController.swift */; };
 		D10CD50224EF5CAE004416F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10CD50024EF5CAE004416F4 /* Main.storyboard */; };
 		D10CD50424EF5CB1004416F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D10CD50324EF5CB1004416F4 /* Assets.xcassets */; };
 		D10CD50724EF5CB1004416F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10CD50524EF5CB1004416F4 /* LaunchScreen.storyboard */; };
@@ -27,6 +27,8 @@
 		D1BDCD2024F8FED0008FC9FF /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1F24F8FED0008FC9FF /* ObservableObject.swift */; };
 		D1BDCD2224F8FEEC008FC9FF /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD2124F8FEEC008FC9FF /* Transform.swift */; };
 		D1E8EF152501E55E003DA554 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E8EF142501E55E003DA554 /* PostCell.swift */; };
+		D1E8EF4625020BE9003DA554 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E8EF4525020BE9003DA554 /* ViewModel.swift */; };
+		D1E8EF4825020D68003DA554 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E8EF4725020D68003DA554 /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,7 @@
 /* Begin PBXFileReference section */
 		D10CD4F724EF5CAE004416F4 /* Callback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Callback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10CD4FA24EF5CAE004416F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D10CD4FE24EF5CAE004416F4 /* CallbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackViewController.swift; sourceTree = "<group>"; };
+		D10CD4FE24EF5CAE004416F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D10CD50124EF5CAE004416F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D10CD50324EF5CB1004416F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D10CD50624EF5CB1004416F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +67,8 @@
 		D1BDCD1F24F8FED0008FC9FF /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		D1BDCD2124F8FEEC008FC9FF /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		D1E8EF142501E55E003DA554 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		D1E8EF4525020BE9003DA554 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D1E8EF4725020D68003DA554 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +113,12 @@
 			children = (
 				D13D02D724FC99CF00108EF4 /* Extension */,
 				D1BDCD1E24F8FEBC008FC9FF /* Type */,
-				D1E8EF132501E558003DA554 /* View */,
-				D13CC05C24F8DF9500280311 /* Model */,
 				D1BDCD1724F8E92E008FC9FF /* Repository */,
+				D13CC05C24F8DF9500280311 /* Model */,
+				D1E8EF4925020D83003DA554 /* ViewModel */,
+				D1E8EF132501E558003DA554 /* View */,
 				D10CD4FA24EF5CAE004416F4 /* AppDelegate.swift */,
-				D10CD4FE24EF5CAE004416F4 /* CallbackViewController.swift */,
-				D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */,
+				D10CD4FE24EF5CAE004416F4 /* ViewController.swift */,
 				D10CD50024EF5CAE004416F4 /* Main.storyboard */,
 				D10CD50324EF5CB1004416F4 /* Assets.xcassets */,
 				D10CD50524EF5CB1004416F4 /* LaunchScreen.storyboard */,
@@ -178,6 +182,16 @@
 				D1E8EF142501E55E003DA554 /* PostCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D1E8EF4925020D83003DA554 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D1E8EF4525020BE9003DA554 /* ViewModel.swift */,
+				D1E8EF4725020D68003DA554 /* BaseViewModel.swift */,
+				D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1E8EF152501E55E003DA554 /* PostCell.swift in Sources */,
-				D10CD4FF24EF5CAE004416F4 /* CallbackViewController.swift in Sources */,
+				D10CD4FF24EF5CAE004416F4 /* ViewController.swift in Sources */,
 				D13CC06024F8DFAB00280311 /* PostModel.swift in Sources */,
 				D1BDCD2224F8FEEC008FC9FF /* Transform.swift in Sources */,
 				D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */,
@@ -291,9 +305,11 @@
 				D13D02DD24FC9D8D00108EF4 /* BaseViewController.swift in Sources */,
 				D13D02DF24FCBA4C00108EF4 /* TestError.swift in Sources */,
 				D13CC05E24F8DFA000280311 /* UserModel.swift in Sources */,
+				D1E8EF4625020BE9003DA554 /* ViewModel.swift in Sources */,
 				D13D02D624FC6FDA00108EF4 /* BaseRepository.swift in Sources */,
 				D1BDCD1D24F8ECCD008FC9FF /* PostRepository.swift in Sources */,
 				D10CD4FB24EF5CAE004416F4 /* AppDelegate.swift in Sources */,
+				D1E8EF4825020D68003DA554 /* BaseViewModel.swift in Sources */,
 				D13D02D924FC99D900108EF4 /* UIView+Visible.swift in Sources */,
 				D1BDCD1B24F8ECA0008FC9FF /* ImageRepository.swift in Sources */,
 				D13D02DB24FC9C3900108EF4 /* NSKeyValueObservation+Scope.swift in Sources */,

@@ -14,7 +14,7 @@ class ObservableObject : NSObject, ObservedObject {
     
 }
 
-protocol ObservedObject { }
+@objc protocol ObservedObject { }
 
 extension ObservedObject where Self : ObservableObject {
     
