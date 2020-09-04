@@ -118,8 +118,6 @@ final class CallbackViewModel : ObservableObject {
                     
                     self.decrementLoading()
                 }
-                
-                self.decrementLoading()
             } else {
                 self.setAlertMessage(error!.localizedDescription)
             }
