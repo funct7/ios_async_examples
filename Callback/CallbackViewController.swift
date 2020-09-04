@@ -30,6 +30,13 @@ final class CallbackViewController: BaseViewController {
             .bind(\.user?.userImage, userImageView, \.image)
             .setScope(&tokenList)
         
+        viewModel
+            .bind(\.feed) { [unowned listView] _ in
+                listView?.reloadData()
+            }
+            .setScope(&tokenList)
+            
+        
         viewModel.bind(\.signInMessage) { [weak self] in
             guard let message = $0 else { return }
             
@@ -107,6 +114,41 @@ private extension CallbackViewController {
     func toggleAction(_ sender: UISwitch) {
         if sender.isOn { mockSuccess() }
         else { mockFailure() }
+    }
+    
+}
+
+extension CallbackViewController : UICollectionViewDataSource {
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        numberOfItemsInSection section: Int)
+        -> Int
+    {
+        return viewModel.feed.count
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath)
+        -> UICollectionViewCell
+    {
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "PostCell",
+            for: indexPath) as! PostCell
+        
+        let item = viewModel.feed[indexPath.item]
+        
+        item.bind(\.username, cell, \.usernameLabel.text)
+            .setScope(&cell.tokenList)
+        
+        item.bind(\.userImage, cell, \.imageView.image)
+            .setScope(&cell.tokenList)
+        
+        item.bind(\.content, cell, \.contentLabel.text)
+            .setScope(&cell.tokenList)
+        
+        return cell
     }
     
 }

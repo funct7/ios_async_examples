@@ -160,7 +160,7 @@ extension CallbackViewModel {
         }
     }
     
-    final class Post : NSObject {
+    final class Post : ObservableObject {
         let id: String
         @objc dynamic var userID: String
         @objc dynamic var username: String! = nil
