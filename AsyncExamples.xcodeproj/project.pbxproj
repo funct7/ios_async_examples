@@ -29,6 +29,7 @@
 		D1E8EF152501E55E003DA554 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E8EF142501E55E003DA554 /* PostCell.swift */; };
 		D1E8EF4625020BE9003DA554 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E8EF4525020BE9003DA554 /* ViewModel.swift */; };
 		D1E8EF6025021701003DA554 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1E8EF5F25021701003DA554 /* RxSwift */; };
+		D1E8EF6225021713003DA554 /* RxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E8EF6125021713003DA554 /* RxViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		D1BDCD2124F8FEEC008FC9FF /* Transform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		D1E8EF142501E55E003DA554 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		D1E8EF4525020BE9003DA554 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D1E8EF6125021713003DA554 /* RxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			children = (
 				D1E8EF4525020BE9003DA554 /* ViewModel.swift */,
 				D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */,
+				D1E8EF6125021713003DA554 /* RxViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				D13D02E124FCBA5900108EF4 /* URL+Constant.swift in Sources */,
 				D13D02DD24FC9D8D00108EF4 /* BaseViewController.swift in Sources */,
 				D13D02DF24FCBA4C00108EF4 /* TestError.swift in Sources */,
+				D1E8EF6225021713003DA554 /* RxViewModel.swift in Sources */,
 				D13CC05E24F8DFA000280311 /* UserModel.swift in Sources */,
 				D1E8EF4625020BE9003DA554 /* ViewModel.swift in Sources */,
 				D13D02D624FC6FDA00108EF4 /* BaseRepository.swift in Sources */,

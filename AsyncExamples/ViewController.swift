@@ -81,7 +81,7 @@ final class ViewController: BaseViewController {
     
     // MARK: Private
     
-    private let viewModel: ViewModel = CallbackViewModel()
+    private let viewModel: ViewModel = RxViewModel()
     
     @IBOutlet
     private weak var signInButton: UIButton!
