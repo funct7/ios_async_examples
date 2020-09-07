@@ -22,6 +22,7 @@
 		D13D02DF24FCBA4C00108EF4 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02DE24FCBA4C00108EF4 /* TestError.swift */; };
 		D13D02E124FCBA5900108EF4 /* URL+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02E024FCBA5900108EF4 /* URL+Constant.swift */; };
 		D1718707250601F1008B40F5 /* SwiftCoroutine in Frameworks */ = {isa = PBXBuildFile; productRef = D1718706250601F1008B40F5 /* SwiftCoroutine */; };
+		D171870925060214008B40F5 /* CoroutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D171870825060214008B40F5 /* CoroutineViewModel.swift */; };
 		D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1824F8E938008FC9FF /* UserRepository.swift */; };
 		D1BDCD1B24F8ECA0008FC9FF /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */; };
 		D1BDCD1D24F8ECCD008FC9FF /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */; };
@@ -62,6 +63,7 @@
 		D13D02DC24FC9D8D00108EF4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D13D02DE24FCBA4C00108EF4 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		D13D02E024FCBA5900108EF4 /* URL+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Constant.swift"; sourceTree = "<group>"; };
+		D171870825060214008B40F5 /* CoroutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoroutineViewModel.swift; sourceTree = "<group>"; };
 		D1BDCD1824F8E938008FC9FF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				D1E8EF4525020BE9003DA554 /* ViewModel.swift */,
 				D1E8EF4725020D68003DA554 /* BaseViewModel.swift */,
 				D13CC06224F8DFCF00280311 /* CallbackViewModel.swift */,
+				D171870825060214008B40F5 /* CoroutineViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				D1E8EF152501E55E003DA554 /* PostCell.swift in Sources */,
 				D10CD4FF24EF5CAE004416F4 /* ViewController.swift in Sources */,
 				D13CC06024F8DFAB00280311 /* PostModel.swift in Sources */,
+				D171870925060214008B40F5 /* CoroutineViewModel.swift in Sources */,
 				D1BDCD2224F8FEEC008FC9FF /* Transform.swift in Sources */,
 				D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */,
 				D13CC06324F8DFCF00280311 /* CallbackViewModel.swift in Sources */,
