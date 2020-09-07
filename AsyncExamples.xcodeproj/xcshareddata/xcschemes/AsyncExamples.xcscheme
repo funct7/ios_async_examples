@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D10CD4F624EF5CAE004416F4"
-               BuildableName = "Callback.app"
+               BuildableName = "AsyncExamples.app"
                BlueprintName = "AsyncExamples"
                ReferencedContainer = "container:AsyncExamples.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D10CD4F624EF5CAE004416F4"
-            BuildableName = "Callback.app"
+            BuildableName = "AsyncExamples.app"
             BlueprintName = "AsyncExamples"
             ReferencedContainer = "container:AsyncExamples.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D10CD4F624EF5CAE004416F4"
-            BuildableName = "Callback.app"
+            BuildableName = "AsyncExamples.app"
             BlueprintName = "AsyncExamples"
             ReferencedContainer = "container:AsyncExamples.xcodeproj">
          </BuildableReference>

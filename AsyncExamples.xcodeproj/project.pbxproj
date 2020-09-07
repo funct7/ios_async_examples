@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		D13D02DD24FC9D8D00108EF4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02DC24FC9D8D00108EF4 /* BaseViewController.swift */; };
 		D13D02DF24FCBA4C00108EF4 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02DE24FCBA4C00108EF4 /* TestError.swift */; };
 		D13D02E124FCBA5900108EF4 /* URL+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13D02E024FCBA5900108EF4 /* URL+Constant.swift */; };
+		D1718707250601F1008B40F5 /* SwiftCoroutine in Frameworks */ = {isa = PBXBuildFile; productRef = D1718706250601F1008B40F5 /* SwiftCoroutine */; };
 		D1BDCD1924F8E938008FC9FF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1824F8E938008FC9FF /* UserRepository.swift */; };
 		D1BDCD1B24F8ECA0008FC9FF /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1A24F8ECA0008FC9FF /* ImageRepository.swift */; };
 		D1BDCD1D24F8ECCD008FC9FF /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BDCD1C24F8ECCD008FC9FF /* PostRepository.swift */; };
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1718707250601F1008B40F5 /* SwiftCoroutine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +212,9 @@
 			dependencies = (
 			);
 			name = AsyncExamples;
+			packageProductDependencies = (
+				D1718706250601F1008B40F5 /* SwiftCoroutine */,
+			);
 			productName = ConcurrencyExamples;
 			productReference = D10CD4F724EF5CAE004416F4 /* AsyncExamples.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +265,9 @@
 				Base,
 			);
 			mainGroup = D10CD4EE24EF5CAE004416F4;
+			packageReferences = (
+				D1718705250601F1008B40F5 /* XCRemoteSwiftPackageReference "SwiftCoroutine" */,
+			);
 			productRefGroup = D10CD4F824EF5CAE004416F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -581,6 +589,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D1718705250601F1008B40F5 /* XCRemoteSwiftPackageReference "SwiftCoroutine" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/belozierov/SwiftCoroutine.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1718706250601F1008B40F5 /* SwiftCoroutine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1718705250601F1008B40F5 /* XCRemoteSwiftPackageReference "SwiftCoroutine" */;
+			productName = SwiftCoroutine;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D10CD4EF24EF5CAE004416F4 /* Project object */;
 }
