@@ -51,21 +51,23 @@ final class CoroutineViewModel : BaseViewModel {
             let postList = try model.fetchPost(userID: userModel.id).await()
             feed = postList.map { Post(id: $0.id, userID: $0.userID, content: $0.content) }
             
-            let userList = try postList
+            try postList
                 .reduce(into: Set<String>()) { $0.insert($1.userID) }
-                .map { try model.fetchUser(id: $0).await() }
-                
-            let imageList = try userList
-                .map { try model.resolveImage(url: $0.pictureURL).await() }
-            
-            zip(userList, imageList).forEach { (user, image) in
-                feed
-                    .filter { $0.userID == user.id }
-                    .forEach {
-                        $0.username = user.username
-                        $0.userImage = image
-                    }
-            }
+                .map { model.fetchUser(id: $0) }
+                .map {
+                    let userModel = try $0.await()
+                    
+                    feed
+                        .filter { $0.userID == userModel.id }
+                        .forEach { $0.username = userModel.username }
+                    
+                    return (userModel.id, model.resolveImage(url: userModel.pictureURL))
+                }
+                .forEach{ (id: String, image: CoPromise<UIImage>) in
+                    try feed
+                        .filter { $0.userID == id }
+                        .forEach { $0.userImage = try image.await() }
+                }
         } catch {
             _setAlertMessage(error.localizedDescription)
         }
